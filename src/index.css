@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-paper-cream text-text-dark font-serif overflow-x-hidden;
+    background-image: 
+      url('https://www.transparenttextures.com/patterns/old-paper.png'),
+      radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.02) 100%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .paper-card {
+    @apply bg-white/70 border border-accent-gold/20 shadow-lg backdrop-blur-sm;
+    background-image: url('https://www.transparenttextures.com/patterns/handmade-paper.png');
+  }
+
+  .nav-link {
+    @apply relative transition-all duration-300 font-medium text-gray-600 hover:text-ruc-red;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-1/2 w-0 h-0.5 bg-ruc-red transition-all duration-300 -translate-x-1/2;
+  }
+
+  .nav-link.active::after, .nav-link:hover::after {
+    @apply w-4/5;
+  }
+
+  .btn-ruc {
+    @apply px-8 py-3 bg-ruc-red text-white rounded-full hover:bg-ruc-red-dark transition-all duration-300 shadow-xl hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { @apply bg-paper-cream; }
+::-webkit-scrollbar-thumb { 
+  @apply bg-accent-gold rounded-full;
+}
+::-webkit-scrollbar-thumb:hover { @apply bg-ruc-red; }
+
+@keyframes leaf-fall {
+  0% { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { transform: translateY(110vh) translateX(150px) rotate(720deg); opacity: 0; }
+}
