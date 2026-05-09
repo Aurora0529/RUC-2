@@ -77,7 +77,7 @@ const Home = () => {
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center filter sepia-[15%] contrast-[95%] brightness-[102%]"
-          style={{ backgroundImage: `url(${encodeURI('images/背景图.png')})` }}
+          style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${encodeURI('images/背景图.png')})` }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-paper-cream"></div>
         <GinkgoLeaves />

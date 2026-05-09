@@ -2,10 +2,12 @@
   "name": "ruc-time-station",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://Aurora0529.github.io/ruc-time-station",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:gh": "npm run build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
