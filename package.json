@@ -2,7 +2,7 @@
   "name": "ruc-time-station",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Aurora0529.github.io/ruc-time-station",
+  "homepage": "https://Aurora0529.github.io/RUC-SGYZ",
   "type": "module",
   "scripts": {
     "dev": "vite",
